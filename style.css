@@ -9,6 +9,8 @@ html, body {
   background-color: #F6F6F8;
   }
   
+::-webkit-scrollbar{
+    display:none}
 
 .header {
     background-color: #457B9D;
@@ -347,6 +349,23 @@ main {
   .slideshow-container:hover .hero-text {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .map-text{
+    margin-top: 1840px;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 0; /* Размещаем наверху */
+    left: 50%; /* Размещаем по центру горизонтально */
+    transform: translateX(-50%); /* Корректируем положение по горизонтали на половину ширины текста */
+    color: #0D1C2E;
+    font-family: Anton;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    z-index: 2;
   }
 
 
