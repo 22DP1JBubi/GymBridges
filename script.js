@@ -38,6 +38,21 @@ function currentSlide(n) {
   showSlides();
 }
 
+
+
+
+
+  // JavaScript для плавной прокрутки к якорю
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
 // const areas = document.querySelectorAll('area');
 
 // // const muscles = document.querySelectorAll('path');
