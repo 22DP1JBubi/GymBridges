@@ -53,6 +53,35 @@ function currentSlide(n) {
     });
   });
 
+
+
+// Показываем кнопку "Наверх" при прокрутке до определенной высоты
+window.onscroll = function() {
+  scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("back-to-topid").style.display = "block";
+  } else {
+      document.getElementById("back-to-topid").style.display = "none";
+  }
+}
+
+// Плавный скроллинг к началу страницы при клике на кнопку "Наверх"
+document.getElementById('back-to-topid').addEventListener('click', function() {
+  scrollToTop(600); // 600 - время скроллинга в миллисекундах
+});
+
+function scrollToTop(scrollDuration) {
+  var scrollStep = -window.scrollY / (scrollDuration / 15),
+      scrollInterval = setInterval(function() {
+          if (window.scrollY !== 0) {
+              window.scrollBy(0, scrollStep);
+          } else clearInterval(scrollInterval);
+      }, 15);
+}
+
 // const areas = document.querySelectorAll('area');
 
 // // const muscles = document.querySelectorAll('path');
