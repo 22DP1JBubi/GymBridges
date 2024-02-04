@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gym bridges</title>
+  <!-- Подключение CSS файла -->
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+  <link rel="icon" href="Logo1.svg" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="jquery.maphilight.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaLxpPOdyV8bVweF1y0AQRAtLPdfftFvs&callback=initMap"></script>
+  <script type="text/javascript" src="mapscript.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+          $('.map').maphilight();
+
+          $('#squidheadlink').mouseover(function(e) {
+              $('#squidhead').mouseover();
+          }).mouseout(function(e) {
+              $('#squidhead').mouseout();
+          }).click(function(e) { e.preventDefault(); });
+  });
+</script>
+</head>
+
+<body>
+
+    <header class="header">
+    <a href="index.html" id="logo">
+        <img class="logo" src="images/logo.png" alt="logotipe"></a>
+    
+      <nav class="menu">
+        <ul class="menu">
+          <li class="Muscle"><a href="#section1">Muscle selection</a></li>
+          <li class="Training"><a href="programs.html">Training programs</a></li>
+          <li class="About"><a href="#">About the project</a></li>
+          <li class="Contacts"><a href="#section2">Contacts & Map</a></li>
+          <li class="Login"><a href="#">Login</a></li>
+          <li class="LV"><a href="#">LV</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <p class="">Exercises for arms</p>
+
+
+
+
+
+</main>
+<footer class="footer">
+  <div class="insta">
+    <a href="https://www.instagram.com/evgeni_ibubin" target="_blank">
+      <img src="images/instagram_icon.svg" alt="Иконка">
+      <p>evgeni_ibubin</p>
+    </a>
+  </div>
+  <div class="google">
+    <a href="#">
+      <img src="images/gmail_icon.svg" alt="Иконка">
+      <p>jevgenijs.bubins@gmail.com</p>
+    </a>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+<!-- <script src="script2.js" defer></script> -->
+</body>
+</html>
