@@ -141,7 +141,8 @@ main {
 
 /* Стили для контейнера ссылки */
 .insta a,
-.google a {
+.google a,
+.back-to-top a {
   position: relative;
   display: inline-flex;
   text-decoration: none;
@@ -151,7 +152,8 @@ main {
 
 /* Стили для текста */
 .insta p,
-.google p {
+.google p,
+.back-to-top p {
   margin: 0;
   transition: background-color 0.3s ease;
   display: inline-block;
@@ -160,7 +162,7 @@ main {
 
 /* Стили для подсветки при наведении на текст */
 .insta a:hover::before,
-.google a:hover::before {
+.google a:hover::before{
   content: "";
   position: absolute;
   top: 0;
@@ -180,6 +182,23 @@ main {
 .google{
   bottom: 20px;
   left: 50px;
+}
+
+.back-to-top:hover {
+  background-color: #5C99B1; /* Новый цвет фона при наведении */
+}
+.back-to-top {
+  position: absolute; /* Добавьте позиционирование */
+  z-index: 1; /* Добавьте z-index для позиционирования над футером */
+  bottom: 20px;
+  right: 40px;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  font-family: Anton;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: 1.0px;
 }
 
 
