@@ -6,6 +6,10 @@
   
   <title>Gym bridges</title>
   <!-- Подключение CSS файла -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
   <link rel="icon" href="Logo1.svg" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -26,86 +30,174 @@
           }).click(function(e) { e.preventDefault(); });
   });
 </script>
+<style>
+    .swiper-slide img {
+      display: block;      /* Устраняет отступы по умолчанию от inline элементов */
+      width: 100%;         /* Заставляет картинку занимать весь доступный ширину */
+      height: 100%;        /* Поддерживает пропорции изображения */
+      margin: 0;           /* Убирает внешние отступы */
+      padding: 0;          /* Убирает внутренние отступы */
+      object-fit: cover;     /* Обрезает изображение, сохраняя его центральные части */
+     object-position: bottom; /* Приоритет нижней части изображения */
+    
+}
+.swiper-slide{
+  height: 600px;
+}
+.slider .container {
+  width: 100%;      /* Ensures container is full width */
+  max-width: none;  /* Removes any maximum width restrictions */
+  padding: 0;       /* Removes padding that might cause issues */
+  margin-right: 0;
+  margin-left: 0;
+  height: 600px;    /* Specific height for sliders */
+}
+ .slider .row {
+  width: 100%;      /* Ensures container is full width */
+  max-width: none;  /* Removes any maximum width restrictions */
+  padding: 0;       /* Removes padding that might cause issues */
+  margin-right: 0;
+  margin-left: 0;
+  height: 600px;    /* Specific height for sliders */
+}
+
+
+.muscle-map-s .container {
+  width: 100%;      /* Ensures container is full width */
+  max-width: 960px;  /* Removes any maximum width restrictions */
+  padding: 0;       /* Removes padding that might cause issues */
+
+}
+ .muscle-map-s .row {
+  width: 100%;      /* Ensures container is full width */
+  max-width: 960px;  /* Removes any maximum width restrictions */
+}
+
+.muscle-map-s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.muscle-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Для центровки текста внутри */
+}
+
+.muscle-text{
+ 
+  position: absolute;
+  top: 0; /* Размещаем наверху */
+  left: 50%; /* Размещаем по центру горизонтально */
+  transform: translateX(-50%); /* Корректируем положение по горизонтали на половину ширины текста */
+  color: #0D1C2E;
+  font-family: Anton;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.8px;
+}
+
+.col-12.col-lg-6 img {
+  max-width: 470px; /* Максимальная ширина изображения */
+  height: auto;
+}
+.img-fluid.map.maphilighted{
+  max-width: 470px; /* Максимальная ширина изображения */
+  height: 100%;
+}
+
+</style>
 </head>
 <body>
-
-<header class="header">
-
-  <a href="index.html" id="logo">
-    <img class="logo" src="images/logo.png" alt="logotipe"></a>
-
-  <nav class="menu">
-    <ul class="menu">
-      <li class="Muscle"><a href="#section1">Muscle selection</a></li>
-      <li class="Training"><a href="programs.html">Training programs</a></li>
-      <li class="About"><a href="#">About the project</a></li>
-      <li class="Contacts"><a href="#section2">Contacts & Map</a></li>
-      <li class="Login"><a href="#">Login</a></li>
-      <li class="LV"><a href="#">LV</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section1">Muscle selection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Training programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">Contacts & Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
+  
+
 <main>
 
-
-<div class="slideshow-container">
-  <div class="hero-text">
-  <h1>Train Yourself</h1>
-  <p>Bridges between fitness and your health</p>
-</div>
-  <div class="slide fade A">
-      <img src="images/foto1.jpg" alt="Slide 1">
+<section class="slider">
+  <div class="container">
+    <div class="row">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/foto1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images/foto2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images/foto3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images/foto4.jpg" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
   </div>
-  <div class="slide fade">
-      <img src="images/foto4.jpg" alt="Slide 2">
-  </div>
-  <div class="slide fade">
-      <img src="images/foto3.jpg" alt="Slide 3">
-  </div>
-  <!-- Добавьте другие слайды по аналогии -->
-</div>
-
-<!-- Кружочки для переключения -->
-<div class="dots">
-  <ul>
-    <li class="dot" onclick="currentSlide(1)"></li>
-    <li class="dot" onclick="currentSlide(2)"></li>
-    <li class="dot" onclick="currentSlide(3)"></li>
-    <!-- Добавьте другие кружочки по аналогии -->
-  </ul>
-</div>
-</div>
-
-<!-- <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-<a class="next" onclick="changeSlide(1)">&#10095;</a> -->
-
-
-
-
-
-<!-- <div class="muscle-div">
-  <div class="map" style="background: url(body.png);">
-
-  <p>Muscle selection</p>
-  <img class="map maphilighted" src="body.png" alt="Human Body" usemap="#muscle-map">
-  <map name="muscle-map">
-    <area shape="poly" coords="75,365,80,353,86,338,92,326,98,306,104,293,112,285,122,275,124,287,125,295,134,293,145,288,152,286,152,295,148,308,143,318,135,327,124,336,113,346,105,355,99,364,96,371,92,378" href="programs.html" alt="Muscle Area">
-    <area href="#" shape="poly" coords="75,365,80,353,86,338,92,326,98,306,104,293,112,285,122,275,124,287,125,295,134,293,145,288,152,286,152,295,148,308,143,318,135,327,124,336,113,346,105,355,99,364,96,371,92,378" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-  </map>
-</div> -->
+</section>
 
 
 <section id="section1">
 <p class="muscle-text">Muscle selection</p></section>
-<div class="muscle-div">
-  <!-- jquery.maplight.js page - 249 or cntr+f(maphilighted)-->
-<img src="download 1body_smaller.png" class="map maphilighted" alt="Human Body" usemap="#muscle-map">
-</div>
-<map name="muscle-map">
+
+
+<section class="muscle-map-s">
+  <div class="container">
+    <div class="row">
+      <!-- Front view -->
+      <div class="col-12 col-lg-6">
+        <img src="download 1body_smaller_front.png" class="img-fluid map maphilighted" alt="Front View" usemap="#muscle-map-front">
+      </div>
+      <!-- Back view -->
+      <div class="col-12 col-lg-6">
+        <img src="download 1body_smaller_back.png" class="img-fluid map maphilighted" alt="Back View"  usemap="#muscle-map-back">
+      </div>
+    </div>
+  </div>
+  
+<map name="muscle-map-front">
 <area href="arms.html" title="left-forearm" shape="poly" coords="75,365,80,353,86,338,92,326,98,306,104,293,112,285,122,275,124,287,125,295,134,293,145,288,152,286,152,295,148,308,143,318,135,327,124,336,113,346,105,355,99,364,96,371,92,378" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="arms.html" title="left-biceps" shape="poly" coords="127,298,125,286,123,272,125,259,129,246,134,234,143,230,151,223,160,219,167,223,172,230,170,239,169,250,167,261,164,272,159,281,151,287,142,290,134,294" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="arms.html" title="left-sholder" shape="poly" coords="137,229,134,216,134,202,137,191,143,179,151,173,161,168,171,167,184,168,192,169,200,175,191,179,183,186,174,198,166,210,161,219,154,220,146,225" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="left-chest" shape="poly" coords="160,218,163,212,168,205,173,199,177,192,183,186,188,181,194,178,200,176,206,177,211,179,216,181,221,184,226,188,229,193,231,199,231,205,231,211,232,216,232,223,231,230,226,234,219,236,211,236,205,238,198,238,191,236,183,234,175,231,167,225" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="back_and_cheast.html" title="left-chest" shape="poly" coords="160,218,163,212,168,205,173,199,177,192,183,186,188,181,194,178,200,176,206,177,211,179,216,181,221,184,226,188,229,193,231,199,231,205,231,211,232,216,232,223,231,230,226,234,219,236,211,236,205,238,198,238,191,236,183,234,175,231,167,225" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="#" title="right-chest" shape="poly" coords="310,219,305,223,299,227,293,231,287,235,280,237,272,239,264,238,255,236,247,236,240,233,238,225,239,217,239,209,239,201,241,195,244,190,249,187,253,183,258,179,263,177,269,175,274,176,279,179,284,183,289,187,293,194,297,198,300,203,303,207,306,211" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="arms.html" title="right-shoulder" shape="poly" coords="273,174,278,169,283,168,289,167,295,167,302,167,307,168,314,170,319,172,323,175,327,179,331,183,333,187,335,192,335,198,336,203,336,208,336,215,336,220,335,226,332,231,325,224,319,219,312,219,307,213,302,205,298,197,291,189,285,182,278,177" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="arms.html" title="right-biceps" shape="poly" coords="302,227,310,220,316,218,330,228,335,230,339,234,345,244,348,257,349,268,349,275,348,287,346,296,331,291,320,286,313,279,309,270,306,257,303,249,303,238" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
@@ -125,40 +217,34 @@
 <area href="#" title="" shape="poly" coords="" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="#" title="" shape="poly" coords="" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
 <area href="#" title="" shape="poly" coords="" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-
-
-
-
-
-
-<area href="#" title="left-tricpes" shape="poly" coords="618,202,620,212,623,222,624,235,620,246,615,263,606,277,600,288,588,290,576,288,572,278,570,266,574,250,580,232,587,218,596,208" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="left-shoulder" shape="poly" coords="587,217,585,202,585,192,589,182,592,173,599,165,607,162,614,159,621,156,628,154,635,153,643,154,647,157,649,162,644,168,638,175,631,179,622,184,617,191,616,196,615,201,610,203,603,205,598,207,594,211,598,207" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="trapezius muscles" shape="poly" coords="646,152,658,145,667,136,676,126,679,119,685,120,692,120,701,121,706,120,710,124,714,130,719,137,726,143,733,148,739,152,736,160,731,168,726,176,724,185,723,196,723,205,722,216,718,226,712,236,707,246,703,254,695,268,687,262,682,250,674,237,665,224,663,204,663,187,658,172,652,164" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="right-shoulder" shape="poly" coords="735,164,740,154,748,155,758,155,768,158,778,161,787,168,795,179,799,190,800,202,799,220,790,210,784,205,770,200,768,190,760,184,752,178" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="left-forearm" shape="poly" coords="523,384,528,372,532,358,535,345,540,331,546,318,550,306,558,290,569,277,576,285,586,286,595,288,596,294,595,304,590,317,583,329,575,339,567,350,558,366,551,378,546,389,534,388" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="right-triceps" shape="poly" coords="768,201,778,204,788,208,796,216,801,225,807,238,812,253,815,269,814,281,809,286,802,287,790,288,783,282,777,274,772,265,766,248,763,235,764,220" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="right-forearm" shape="poly" coords="790,287,800,287,811,286,817,276,823,284,830,298,837,310,843,325,848,337,852,352,854,365,862,381,855,385,840,388,834,372,824,356,812,340,802,328,794,311" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="1" shape="poly" coords="649,164,657,170,659,178,661,188,661,200,664,216,657,218,650,221,639,226,629,224,622,220,617,212,616,203,616,193,621,184,628,181,637,178,643,170" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="2" shape="poly" coords="735,163,742,170,749,176,757,181,764,184,768,189,769,198,768,208,766,217,762,224,755,227,747,226,739,222,730,218,722,217,720,208,721,197,723,184,727,172" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="lats muscle" shape="poly" coords="620,220,625,224,631,226,640,225,648,222,656,217,663,216,666,223,669,230,673,238,678,246,683,254,687,262,688,272,694,268,696,262,700,257,703,250,708,242,713,234,717,227,721,217,728,216,733,220,739,222,745,225,752,226,759,223,764,218,764,224,762,232,761,241,760,250,760,260,758,270,757,279,753,286,748,294,742,302,737,310,734,319,733,327,731,335,725,327,720,318,719,308,719,298,717,288,712,279,705,275,698,272,681,275,674,279,670,285,666,294,665,303,666,311,664,319,659,327,653,335,652,326,651,319,648,310,641,302,635,292,628,282,627,268,625,256,623,241,623,232" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="3" shape="poly" coords="652,335,659,329,664,321,666,311,665,298,667,288,672,281,678,277,685,273,691,270,698,271,705,274,711,278,715,285,718,294,719,301,720,311,721,321,725,327,731,335,725,338,718,340,711,344,705,349,699,354,696,360,692,365,688,358,682,350,675,345,667,341,659,339" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="glutes" shape="poly" coords="659,339,667,340,676,345,683,351,688,359,692,366,695,359,699,353,705,347,713,341,721,339,725,338,729,341,732,344,737,348,741,353,745,357,749,364,751,371,753,378,757,384,760,391,761,399,761,408,760,416,756,423,751,428,743,431,735,434,724,436,714,436,706,435,698,432,698,425,695,418,693,411,688,420,687,426,687,431,681,433,674,436,666,436,659,436,652,435,643,433,633,429,627,422,624,413,623,405,623,397,624,391,628,385,631,379,631,371,635,364,639,357,644,351,650,345" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="left-calves" shape="poly" coords="612,626,608,634,600,641,591,645,590,635,590,621,593,604,597,592,604,579,609,568,608,553,609,545,615,541,620,538,623,544,625,550,630,561,632,550,635,554,638,560,641,566,644,572,645,579,644,590,642,604,641,615,641,626,639,637,635,649,627,646,619,637" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="right-calves" shape="poly" coords="776,544,777,554,776,566,780,576,785,587,790,598,791,612,793,626,794,644,787,641,780,637,773,626,769,634,763,642,751,649,744,638,743,621,743,607,743,590,738,577,742,569,748,558,752,552,757,560,757,551,760,543,764,538" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="Inner thighs abductors left" shape="poly" coords="656,436,659,447,661,462,661,475,663,487,665,498,668,510,671,501,676,492,680,480,684,467,685,455,686,442,686,434,677,437,667,438" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="Inner thighs abductors right" shape="poly" coords="699,434,698,446,699,458,703,468,707,481,711,493,717,510,720,500,723,487,724,472,727,456,729,436,719,438,711,438" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="left hamstrings" shape="poly" coords="623,393,624,400,624,409,625,417,629,425,635,429,641,432,647,434,652,436,657,437,657,445,659,453,660,462,661,472,662,482,663,491,667,508,667,517,665,528,662,544,657,554,653,565,646,577,641,564,632,550,629,560,625,549,620,539,611,545,612,532,615,520,615,504,615,487,612,470,611,449,612,432,612,416,615,403" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-<area href="#" title="right hamstrings" shape="poly" coords="761,393,761,403,760,414,755,426,741,433,729,436,727,448,725,462,723,477,721,490,717,510,719,522,721,534,725,546,729,557,734,568,740,577,743,568,748,558,753,551,755,560,759,551,764,539,776,546,773,532,770,516,769,500,771,485,772,472,772,455,773,434,773,417,769,404" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
-
 </map>
 
+<map name="muscle-map-back">
+<area href="#" title="left-tricpes" shape="poly" coords="113,287,108,276,108,263,113,247,119,231,125,217,137,207,154,200,156,209,159,219,161,232,158,245,153,259,148,272,137,288,125,288" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:7,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="left-shoulder" shape="poly" coords="125,217,124,205,126,188,131,173,142,163,156,158,169,156,183,156,187,162,184,168,176,177,165,181,159,186,155,195,152,201,143,204,134,210" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="trapezius muscles" shape="poly" coords="185,154,193,148,204,140,212,132,217,122,224,123,230,123,237,123,244,121,249,127,252,133,260,141,266,147,276,153,267,152,255,149,242,146,231,143,221,145,211,149,200,151" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="right-shoulder" shape="poly" coords="272,165,278,156,288,154,299,156,307,158,316,161,323,166,328,171,332,178,335,186,337,196,337,207,336,218,330,209,322,204,314,203,308,198,306,190,300,182,291,178,280,170" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="left-forearm" shape="poly" coords="61,384,67,371,72,349,81,328,90,302,99,286,107,275,113,287,121,288,131,285,138,285,133,304,126,319,117,332,108,345,100,359,92,372,85,388,72,389" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="right-triceps" shape="poly" coords="307,201,315,203,323,205,330,210,334,216,339,225,344,237,349,248,352,260,352,271,350,280,346,287,336,288,326,286,316,275,308,257,302,238,302,225,304,210" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="right-forearm" shape="poly" coords="326,288,334,287,343,287,348,285,353,275,358,281,363,289,368,299,373,309,377,320,382,333,386,344,389,356,393,368,398,382,392,385,384,387,376,387,372,378,368,370,364,362,359,355,352,343,344,333,337,325,332,314,328,302" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="1" shape="poly" coords="157,191,163,182,174,178,183,169,189,163,194,170,198,180,200,190,201,200,202,208,202,217,195,217,189,221,183,225,174,228,165,224,158,218,155,209,154,201" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="2" shape="poly" coords="260,217,261,205,262,191,265,179,268,170,273,163,281,171,288,178,296,181,303,185,307,193,306,202,306,212,303,221,294,227,284,227,272,219" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="lats muscle" shape="poly" coords="159,217,165,223,173,224,184,221,195,216,201,214,206,224,212,234,217,245,224,256,227,263,233,266,238,259,243,250,246,241,252,231,259,222,260,216,266,217,274,220,282,225,292,225,300,222,300,231,299,240,298,251,297,261,296,271,294,280,289,289,284,299,276,307,273,317,269,326,269,335,262,327,260,316,257,304,255,291,249,279,238,272,229,271,220,275,210,280,205,290,204,301,204,309,201,320,197,329,190,335,190,324,187,313,180,304,173,293,166,284,164,268,161,249,160,233" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="3" shape="poly" coords="184,155,194,153,207,149,219,146,230,142,241,145,252,148,261,151,277,154,274,162,268,170,264,181,261,192,259,205,259,217,256,225,251,234,245,245,239,256,232,269,225,262,220,251,214,241,207,231,201,218,201,203,201,188,197,172,189,164" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="4" shape="poly" coords="192,335,198,326,203,318,204,307,203,295,206,285,212,280,219,275,227,268,234,269,239,271,246,275,252,281,256,289,256,298,256,305,258,314,261,321,264,328,270,337,260,339,251,343,242,349,236,355,230,363,224,354,216,347,205,341" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="glutes" shape="poly" coords="197,338,206,340,213,345,220,351,226,357,229,365,234,359,238,352,246,345,256,341,265,337,270,343,276,348,282,354,286,360,290,369,291,376,294,383,298,389,299,394,300,400,299,409,298,417,294,424,286,429,279,435,272,435,262,435,252,436,244,435,236,431,237,421,231,409,228,415,226,422,225,431,219,435,210,436,200,436,187,435,176,431,168,424,162,413,161,398,162,389,170,380,170,368,176,357,187,346" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="left-calves" shape="poly" coords="146,547,151,544,157,541,162,547,166,560,169,551,176,559,180,567,184,576,182,589,180,603,180,615,180,626,177,636,173,648,166,645,158,639,150,627,145,633,138,639,129,643,128,630,129,615,132,603,135,593,140,584,144,574,146,559" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="right-calves" shape="poly" coords="278,576,282,566,285,557,290,550,293,559,296,549,303,538,308,540,312,544,314,551,313,559,314,567,317,575,320,583,325,590,328,599,329,612,330,623,331,633,332,642,324,641,316,634,310,626,306,634,302,641,296,645,288,649,282,638,281,625,281,613,281,598,280,587" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="Inner thighs abductors left" shape="poly" coords="194,436,196,448,199,460,199,472,201,485,202,496,206,507,212,495,217,482,222,468,224,453,224,434,214,436,206,438" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="Inner thighs abductors right" shape="poly" coords="237,434,236,445,236,456,240,466,244,478,248,488,254,508,258,493,261,479,264,463,266,447,267,437,256,438,248,438" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="left hamstrings" shape="poly" coords="162,393,156,401,152,412,151,425,152,436,151,451,151,466,152,483,155,496,155,512,152,525,149,545,158,540,164,533,170,526,171,538,170,548,174,555,179,563,183,572,185,578,190,570,194,561,199,553,201,542,204,530,206,518,207,509,202,498,201,486,201,475,200,463,197,450,195,438,188,436,180,434,172,430,165,423,163,413,163,405" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+<area href="#" title="right hamstrings" shape="poly" coords="300,396,306,402,308,412,310,425,309,438,309,452,310,466,308,482,308,497,308,510,308,524,313,545,303,538,294,530,291,542,291,551,286,557,282,566,277,577,270,566,265,552,260,536,256,521,254,509,258,500,259,486,261,473,264,458,268,436,276,436,284,432,293,427,298,418,300,406" alt="Link" data-maphilight="{&quot;strokeColor&quot;:&quot;ffffff&quot;,&quot;strokeWidth&quot;:8,&quot;fillColor&quot;:&quot;6AA8FE&quot;,&quot;fillOpacity&quot;:0.9}" title="Metadata&#39;d up a bit">
+</map>
+</section>
 
 <section id="section2">
 <p class="map-text">Find your nearest gym!</p>
 <div id="map" style="height: 600px; margin-top: 300px;"></div>
-
-
-
 
 </main>
 <footer class="footer">
@@ -181,6 +267,29 @@
   </div>
 </footer></section>
 <script src="script.js" defer></script>
-<!-- <script src="script2.js" defer></script> -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 7500,               // Задержка в 2500 миллисекунд (2.5 секунды)
+        disableOnInteraction: false // Продолжать автопроигрывание после взаимодействия
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+  </script>
 </body>
 </html>
