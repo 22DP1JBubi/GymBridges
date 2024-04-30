@@ -12,28 +12,24 @@ html, body {
 ::-webkit-scrollbar{
     display:none}
 
-.header {
-    background-color: #457B9D;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
+.navbar-dark.bg-primary {
+  background-color: #457B9D !important; /* !important для переопределения стилей Bootstrap */
+  color: #fff;
 }
 
+/* Для изменения цвета текста ссылок в навигационной панели */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
 .logo {
-    width: 339px;
-    height: 233px;
-    position: relative;
-    top: -70px;
-    left: 0px;
+  width: auto; /* Сохранение пропорций логотипа */
+  height: 80%; /* Уменьшение высоты логотипа до 80% от высоты хедера */
+  max-height: 233px; /* Максимальная высота логотипа */
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%); /* Сдвиг вверх на 50% от его высоты */
 }
   
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0; /* Добавьте отступы 0, чтобы убрать стандартные отступы у ul */
-}
 @import url(https://fonts.googleapis.com/css?family=Anton:regular);
 nav ul li {
     margin-right: 20px;
@@ -61,43 +57,7 @@ nav ul li a {
     text-decoration: none; /* Убрать подчеркивание для ссылок */
 }
   
-.Muscle {
-    flex-shrink: 0;
-    position: absolute;
-    top: 40px;
-    left: 1025px;
-    
-}
-.Training {
-    flex-shrink: 0;
-    position: absolute;
-    top: 40px;
-    left: 1200px;
-}
-.About {
-    flex-shrink: 0;
-    position: absolute;
-    top: 40px;
-    left: 1375px;
-}
-.Contacts {
-    flex-shrink: 0;
-    position: absolute;
-    top: 40px;
-    left: 1550px;
-}
-.Login {
-    flex-shrink: 0;
-    position: absolute;
-    top: 40px;
-    left: 1725px;
-}
-.LV {
-    flex-shrink: 0;
-    position: absolute;
-    top: 40px;
-    left: 1800px;
-}
+
 
 main {
   position: relative;
@@ -203,110 +163,6 @@ main {
 
 
 
-/* Стили для слайд-шоу контейнера */
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  max-height: 700px; /* Максимальная высота слайд-шоу 430 830 630 700*/
-  overflow: hidden;
-  margin: 0 auto; /* Центрирование по горизонтали */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.dots{
-  text-align: center;
-}
-.active {
-  background-color: #717171;
-}
-
-/* Стили для слайдов */
-.slide {
-  display: none;
-  width: 100%;
-}
-
-/* Стили для изображений в слайде */
-.slide img {
-  width: 100%;
-  height: auto;
-}
-
-/* Стили для стрелок переключения */
-.prev, .next {
-  position: absolute;
-  top: 415px; /* Размещаем по вертикали посередине слайд-шоу */
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1;
-  color: #FFF;
-}
-
-.prev {
-  left: 10px; /* Отступ от левого края */
-}
-
-.next {
-  right: 10px; /* Отступ от правого края */
-}
-
-.muscle-div{
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Делаем родительский контейнер относительным */
-  display: flex;
-  flex-direction: column; /* Размещаем элементы вертикально */
-  align-items: center;
-  
-}
-
-.muscle-text{
-  margin-top: 790px;
-  margin-bottom: 50px;
-  position: absolute;
-  top: 0; /* Размещаем наверху */
-  left: 50%; /* Размещаем по центру горизонтально */
-  transform: translateX(-50%); /* Корректируем положение по горизонтали на половину ширины текста */
-  color: #0D1C2E;
-  font-family: Anton;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.8px;
-}
-
-.muscle-div img{
-  width: 930px;
-  height: 813px;
-  flex-shrink: 0;
-  margin-top: 200px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.div.map.maphilghted{
-  top: 200px;
-  left: 50px;
-}
 /* .map{
   width: 930px;
   height: 813px;
@@ -323,20 +179,6 @@ main {
   position: relative; /* Необходимо для правильного отображения 
 }
  */
-
-.slideshow-container {
-  position: relative;
-  overflow: hidden;
-  background-color: #00563f;
-  color: #fff;
-  text-align: center;
-  }
-  
-  .slideshow-container img {
-  width: 100%;
-  height: auto;
-  transition: filter 0.3s, transform 0.3s;
-  }
   
   .hero-text {
   position: absolute;
@@ -360,15 +202,6 @@ main {
   z-index: 1;
   }
   
-  .slideshow-container:hover img {
-  filter: brightness(70%);
-  transform: scale(1.05);
-  }
-  
-  .slideshow-container:hover .hero-text {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-  }
 
   .map-text{
     margin-top: 1840px;
@@ -387,20 +220,6 @@ main {
     z-index: 2;
   }
 
+  
 
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    nav ul {
-      flex-direction: column;
-    }
-  
-    nav ul li {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-  
+
