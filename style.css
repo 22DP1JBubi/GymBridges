@@ -65,120 +65,51 @@ main {
   flex: 1 0 auto;
 }
 
-/* Стили для футера */
 .footer {
-  width: 100%; /* Ширина на всю ширину экрана */
   background-color: #457B9D;
-  bottom: 0;
   color: #fff;
-  padding: 10px 0;
-  flex: 0 0 auto;
-  /*flex-direction: column; /* Располагаем элементы списка в колонку */
-  height: 100px;
-  z-index: 2; /* Добавьте z-index для футера */
-  
 }
-
 
 /* Стили для изображений (иконок) */
 .insta img,
 .google img {
-  width: 24px; /* Укажите желаемую ширину иконки */
-  height: 24px; /* Укажите желаемую высоту иконки */
-  margin-right: 10px; /* Отступ между иконкой и текстом */
-  display: inline-block;
-}
-
-.insta,
-.google {
-  display: flex; /* Отображаем элементы внутри .social_media_item в строку */
-  align-items: center; /* Выравниваем элементы внутри .social_media_item по вертикали */
-  margin-bottom: 10px; /* Отступ между парами иконки и текста */
-  position: absolute; /* Добавьте позиционирование */
-  z-index: 1; /* Добавьте z-index для позиционирования над футером */
-
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
 /* Стили для контейнера ссылки */
 .insta a,
 .google a,
 .back-to-top a {
-  position: relative;
-  display: inline-flex;
   text-decoration: none;
   color: #FFF;
-  /*font-family: anton;*/
 }
 
 /* Стили для текста */
 .insta p,
 .google p,
 .back-to-top p {
-  margin: 0;
   transition: background-color 0.3s ease;
   display: inline-block;
-  z-index: 2;
 }
 
 /* Стили для подсветки при наведении на текст */
-.insta a:hover::before,
-.google a:hover::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.insta a:hover,
+.google a:hover,
+.back-to-top a:hover {
   background-color: #5C99B1;
-  z-index: -1;
-  
 }
 
-.insta{
-  bottom: 50px;
-  left: 50px;
-}
-
-.google{
-  bottom: 20px;
-  left: 50px;
-}
-
-.back-to-top:hover {
-  background-color: #5C99B1; /* Новый цвет фона при наведении */
-}
 .back-to-top {
-  position: absolute; /* Добавьте позиционирование */
-  z-index: 1; /* Добавьте z-index для позиционирования над футером */
-  bottom: 20px;
-  right: 40px;
-  white-space: nowrap; /* Запрещаем перенос текста */
   font-family: Anton;
   font-size: 18px;
-  font-style: normal;
-  font-weight: 100;
-  line-height: normal;
-  letter-spacing: 1.0px;
 }
 
 
 
-/* .map{
-  width: 930px;
-  height: 813px;
-  margin-top: 200px;
-  margin-bottom: 50px;
-} */
-/* 
-/* Стиль для подсветки области 
-.area-highlighted {
-  background-color: red; /* Измените цвет подсветки на желаемый 
-  opacity: 0.5; /* Прозрачность подсветки 
-  transition: background-color 0.3s ease, opacity 0.3s ease; /* Анимация смены цвета и прозрачности 
-  z-index: 1;
-  position: relative; /* Необходимо для правильного отображения 
-}
- */
+
+
   
   .hero-text {
   position: absolute;
@@ -204,12 +135,6 @@ main {
   
 
   .map-text{
-    margin-top: 1840px;
-    margin-bottom: 50px;
-    position: absolute;
-    top: 0; /* Размещаем наверху */
-    left: 50%; /* Размещаем по центру горизонтально */
-    transform: translateX(-50%); /* Корректируем положение по горизонтали на половину ширины текста */
     color: #0D1C2E;
     font-family: Anton;
     font-size: 36px;
@@ -217,7 +142,7 @@ main {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.8px;
-    z-index: 2;
+    text-align: center;
   }
 
   
