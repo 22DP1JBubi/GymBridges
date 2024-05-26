@@ -69,6 +69,8 @@ if (isset($_GET['complete'])) {
 // Фильтрация задач
 $order_by = "created_at DESC";
 $current_filter = isset($_GET['filter']) ? $_GET['filter'] : 'date_desc';
+$status_filter = isset($_GET['status_filter']) ? $_GET['status_filter'] : '';
+
 switch ($current_filter) {
     case "date_asc":
         $order_by = "created_at ASC";
@@ -90,7 +92,14 @@ switch ($current_filter) {
         break;
 }
 
-$sql = "SELECT * FROM tasks WHERE user_id='$user_id' ORDER BY $order_by";
+$status_condition = "";
+if ($status_filter == 'completed') {
+    $status_condition = "AND is_completed = 1";
+} elseif ($status_filter == 'not_completed') {
+    $status_condition = "AND is_completed = 0";
+}
+
+$sql = "SELECT * FROM tasks WHERE user_id='$user_id' $status_condition ORDER BY $order_by";
 $result = $conn->query($sql);
 $conn->close();
 ?>
@@ -146,6 +155,11 @@ $conn->close();
                         <option value="length_desc" <?php if ($current_filter == 'length_desc') echo 'selected'; ?>>Longest First</option>
                         <option value="status" <?php if ($current_filter == 'status') echo 'selected'; ?>>By Status</option>
                         <option value="alphabetical" <?php if ($current_filter == 'alphabetical') echo 'selected'; ?>>Alphabetical</option>
+                    </select>
+                    <select name="status_filter" class="form-control ml-2">
+                        <option value="" <?php if ($status_filter == '') echo 'selected'; ?>>All</option>
+                        <option value="completed" <?php if ($status_filter == 'completed') echo 'selected'; ?>>Completed</option>
+                        <option value="not_completed" <?php if ($status_filter == 'not_completed') echo 'selected'; ?>>Not Completed</option>
                     </select>
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-secondary">Filter</button>
